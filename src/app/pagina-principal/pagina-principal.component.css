@@ -1,0 +1,61 @@
+.container-main {
+    background-color: black;    
+}
+
+.filme-principal {
+    background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)100%); 
+    background-size: cover;
+    height: 60vh;
+    padding: 15px;
+    margin-bottom: 10px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    font-size: 16px;
+    color: white;
+}
+
+.filme-principal .container {
+    width: 60%;
+}
+
+.filme-principal .titulo {
+    font-size: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 15%;
+}
+
+.filme-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.botao-icone {
+    margin-top: -5px;
+    margin-right: 10px;    
+}
+
+.slide {
+    cursor: pointer;
+}
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.img-favorito {
+    position: absolute;
+    background-color: var(--preto);
+    font-size: 36px;
+    color: white;    
+    padding: 10px;
+    width: 55px;
+    height: 55px;
+    top: 0;
+    right: 0;
+}

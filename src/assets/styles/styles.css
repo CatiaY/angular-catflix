@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Declaração de variáveis */
+:root {
+    --vermelho: #E50914;
+    --preto: #141414;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body { height: 100%; }
+
+body {
+    color: white;
+    background-color: var(--preta);    
+}
+
+.botoes {
+    display: flex;
+}
+
+.botao {
+    height: 50px;
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
+    padding: 20px;    
+    margin-right: 15px;
+    display:flex;
+    color: white;
+    font-size: 14px;    
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.botao:hover {
+    background-color: white;
+    color: black;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}

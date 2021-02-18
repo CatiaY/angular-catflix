@@ -1,0 +1,37 @@
+<main class="container-main">
+    <div class="filme-principal" [style.background-image]="'url(' + tituloDestaque.urlDestaque + ')'">
+        <div class="container">
+            <h3 class="titulo">{{ tituloDestaque.titulo | uppercase }}</h3>
+            <p class="descricao">{{ tituloDestaque.descricao}}</p>
+            <div class="botoes">
+                <button class="botao" role="button">
+                  <mat-icon class="botao-icone">play_arrow</mat-icon>
+                  ASSISTIR AGORA
+                </button>
+                <button class="botao" role="button">
+                  <mat-icon class="botao-icone">info</mat-icon>
+                    MAIS INFORMAÇÕES
+                </button>    
+                <button class="botao" role="button" (click)="favoritar(tituloDestaque)">    
+                  <mat-icon class="botao-icone">{{tituloDestaque.favorito ? "favorite" : "favorite_border"}}</mat-icon>              
+                  FAVORITO
+              </button>                
+            </div>            
+        </div>            
+    </div>
+</main>
+
+<div class="carrosel-filmes">
+    <owl-carousel-o [options]="ownOptions">        
+
+        <ng-container *ngFor="let titulo of titulos">
+            <ng-template carouselSlide [id]="titulo.id.toString()">
+              <div class="slide">
+                <img class=".box-filme" [src]="titulo.urlCapa" [alt]="titulo.titulo" (click)="selecionarDestaque(titulo)">
+                <mat-icon class="img-favorito" (click)="favoritar(titulo)">{{titulo.favorito ? "favorite" : "favorite_border"}}</mat-icon>
+            </div>
+            </ng-template>
+        </ng-container>
+    
+    </owl-carousel-o>
+</div>

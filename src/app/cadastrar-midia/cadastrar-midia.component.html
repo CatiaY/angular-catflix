@@ -1,0 +1,68 @@
+<mat-card class="frame-card">
+  <mat-card-header>          
+    <mat-card-title>Cadastrar Mídia</mat-card-title>      
+  </mat-card-header>
+
+  <mat-card-content *ngIf="cadastro">
+    <form [formGroup]="cadastro" autocomplete="off" novalidate
+        (ngSubmit)="submit()" 
+        (ngReset)="reiniciarForm()" > 
+
+        <p>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Título</mat-label>
+            <input matInput type="text" placeholder="Placeholder" formControlName="titulo">              
+            <!-- <button mat-button *ngIf="value" matSuffix mat-icon-button aria-label="Clear" (click)="value=''">
+              <mat-icon>close</mat-icon>
+            </button> -->
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+        </p>
+        
+        <p>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>URL da capa</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="urlCapa">              
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>URL do destaque</mat-label>
+            <input matInput placeholder="Placeholder" formControlName="urlDestaque">              
+            <mat-hint>Hint</mat-hint>
+          </mat-form-field>
+        </p>
+            
+        <p>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Textarea</mat-label>
+            <textarea matInput style="height: 70px;" formControlName="descricao"></textarea>
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Gênero</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let genero of generos" [value]="genero">{{ genero }}</mat-option>              
+            </mat-select>
+          </mat-form-field>
+        </p>
+
+        <p>
+          <mat-checkbox color="warn" formControlName="destaque">Checked</mat-checkbox>
+          <!-- <mat-checkbox color="warn" [(ngModel)]="checked">Checked</mat-checkbox> -->
+        </p>
+    </form>
+    
+  </mat-card-content>
+
+  <mat-card-actions>
+    <div class="botoes">
+      <button type="submit" class="botao cadastro-botao" mat-raised-button>SALVAR</button>
+      <button type="reset" class="botao cadastro-botao" mat-raised-button>CANCELAR</button> 
+    </div>      
+  </mat-card-actions>
+</mat-card>

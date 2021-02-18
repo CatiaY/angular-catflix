@@ -1,0 +1,39 @@
+<div class="container">
+  
+  <div class="menu">
+    <button type="button" mat-icon-button (click)="menuLateral.toggle()" aria-label="Menu lateral">
+      <mat-icon>pets</mat-icon>
+    </button>
+      
+    <a href="home"><h2 class="logo">PETFLIX</h2></a>
+  </div>          
+    
+  <nav class="flex">
+    
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Buscar</mat-label>
+        <input matInput type="search" placeholder="Ex. Título" value="">
+      </mat-form-field>
+      </form>
+    
+    <a href="#">Favoritos</a>    
+    <a href="#">Filmes</a>
+    <a href="#">Animações</a>
+  </nav>
+
+</div>
+
+<mat-sidenav-container class="sidenav-container">
+  
+  <mat-sidenav #menuLateral mode="side"> <!--'over', 'side', 'push'-->          
+    <a [routerLink]="['home']" (click)="menuLateral.toggle()"><div class="item-lateral">Página inicial</div></a>    
+    <a [routerLink]="['listar']" (click)="menuLateral.toggle()"><div class="item-lateral">Listar mídias cadastradas</div></a>
+    <a [routerLink]="['cadastrar']" (click)="menuLateral.toggle()"><div class="item-lateral">Cadastrar nova mídia</div></a>    
+  </mat-sidenav>  
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

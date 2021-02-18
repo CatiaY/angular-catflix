@@ -1,0 +1,12 @@
+.lista {
+    display: flex;
+    flex-wrap: wrap;    
+}
+
+.home-card { 
+    display: flex;
+    flex-direction: column;   
+    width: 300px;    
+    margin: 5px;
+    justify-content: space-between;
+}
