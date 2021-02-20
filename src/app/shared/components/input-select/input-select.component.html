@@ -1,1 +1,12 @@
-<p>input-select works!</p>
+<div [formGroup]="formGroup">
+    <mat-form-field appearance="fill" class="full-width" style="margin-bottom: -10px;">
+        <mat-label>{{ label }}</mat-label>
+        <mat-select [formControlName]="controlName">
+            <mat-option *ngFor="let opcao of opcoes" [value]="opcao">{{ opcao }}</mat-option>              
+        </mat-select>
+    </mat-form-field>
+    
+    <div style="height: 30px">
+        <app-erros-formulario [controlName]="controlName" [formGroup]="formGroup"></app-erros-formulario>
+    </div>
+</div>

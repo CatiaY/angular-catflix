@@ -1,1 +1,13 @@
-<p>input-textarea works!</p>
+<div [formGroup]="formGroup">
+    <mat-form-field appearance="fill" class="full-width" style="margin-bottom: -10px">
+        <mat-label>{{ label }}</mat-label>
+        <textarea matInput style="height: 60px;"
+               [name]="controlName" 
+               [formControlName]="controlName">  
+        </textarea>
+    </mat-form-field>
+
+    <div class="height-30">
+        <app-erros-formulario [controlName]="controlName" [formGroup]="formGroup"></app-erros-formulario>
+    </div>
+</div>

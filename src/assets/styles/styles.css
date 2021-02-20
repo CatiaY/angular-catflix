@@ -24,7 +24,7 @@ body {
 }
 
 .botao {
-    height: 50px;
+    height: auto;
     background-color: rgba(0, 0, 0, .50);
     border: none;
     padding: 20px;    
@@ -50,4 +50,16 @@ body {
 .flex {
     display: flex;
     align-items: center;
+}
+
+.quebrar-linhas {
+    white-space: pre-line;
+}
+
+.height-30 {
+    height: 30px;
+}
+
+.margin-bottom-20 {
+    margin-bottom: 20px;
 }

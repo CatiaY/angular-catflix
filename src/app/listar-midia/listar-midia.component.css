@@ -1,12 +1,30 @@
 .lista {
     display: flex;
-    flex-wrap: wrap;    
+    flex-wrap: wrap;  
+    height: 100%;
+    overflow-y: scroll;  
 }
 
 .home-card { 
     display: flex;
     flex-direction: column;   
-    width: 300px;    
+    width: 350px;    
     margin: 5px;
-    justify-content: space-between;
+    justify-content: space-between;    
+    padding-bottom: 20px;
+}
+
+.sem-registro {
+    margin-top: 50px;
+    color: white;
+    font-size: large;
+    text-align: center;
+}
+
+.margin-left-10 {
+    margin-left: 10px;
+}
+
+.img-tamanho {
+    height: 450px;
 }

@@ -1,23 +1,27 @@
-<div class="lista">
+<div class="lista" infiniteScroll (scrolled)="onScroll()" [scrollWindow]="false"
+  *ngIf="titulos.length; else semRegistro">
   
   <mat-card class="home-card" *ngFor="let titulo of titulos">
-    <div>
-      <mat-card-header>
-        <div mat-card-avatar></div>
-        <mat-card-title>{{ titulo.titulo }}</mat-card-title>
-        <mat-card-subtitle>{{ titulo.genero }}</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image [src]="titulo.urlCapa" [alt]="titulo.titulo">
-      <mat-card-content>
-        <p class="quebrar-linhas">
-          {{ titulo.descricao }}
-        </p>
-      </mat-card-content>
-    </div>
-    <mat-card-actions class="botoes">
-      <button class="botao" mat-raised-button>EDITAR</button>
-      <button class="botao" mat-raised-button>EXCLUIR</button>
-    </mat-card-actions>
+      <div>
+        <mat-card-header>          
+          <mat-card-title>{{ titulo.titulo }}</mat-card-title>
+          <mat-card-subtitle>{{ titulo.genero }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image class="img-tamanho" [src]="titulo.urlCapa || semFoto" [alt]="titulo.titulo">
+        <mat-card-content>
+          <p class="quebrar-linhas margin-left-10">
+            {{ titulo.descricao  || 'Nenhuma descrição informada' }}
+          </p>
+        </mat-card-content>
+      </div>
+      <mat-card-actions class="botoes margin-left-10">
+        <button class="botao" mat-raised-button (click)="editar(titulo.id)">EDITAR</button>
+        <button class="botao" mat-raised-button (click)="excluir(titulo.id)">EXCLUIR</button>
+      </mat-card-actions>      
   </mat-card>
-  
+
 </div>
+
+<ng-template #semRegistro>
+  <h1 class="sem-registro full-width">Nenhum registro encontrado =(</h1>
+</ng-template>

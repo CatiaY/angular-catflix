@@ -1,5 +1,5 @@
-<main class="container-main">
-    <div class="filme-principal" [style.background-image]="'url(' + tituloDestaque.urlDestaque + ')'">
+<main class="container-main" *ngIf="tituloDestaque">
+    <div class="filme-principal" [style.background-image]="obterImagem()">
         <div class="container">
             <h3 class="titulo">{{ tituloDestaque.titulo | uppercase }}</h3>
             <p class="descricao">{{ tituloDestaque.descricao}}</p>
@@ -21,17 +21,17 @@
     </div>
 </main>
 
-<div class="carrosel-filmes">
+<div class="carrosel-filmes" *ngIf="titulos">
     <owl-carousel-o [options]="ownOptions">        
 
-        <ng-container *ngFor="let titulo of titulos">
-            <ng-template carouselSlide [id]="titulo.id.toString()">
-              <div class="slide">
-                <img class=".box-filme" [src]="titulo.urlCapa" [alt]="titulo.titulo" (click)="selecionarDestaque(titulo)">
-                <mat-icon class="img-favorito" (click)="favoritar(titulo)">{{titulo.favorito ? "favorite" : "favorite_border"}}</mat-icon>
+      <ng-container *ngFor="let titulo of titulos">
+          <ng-template carouselSlide [id]="titulo.id.toString()">
+            <div class="slide">
+              <img class="box-filme" [src]="titulo.urlCapa || semFotoCapa" [alt]="titulo.titulo" (click)="selecionarDestaque(titulo)">
+              <mat-icon class="img-favorito" (click)="favoritar(titulo)">{{titulo.favorito ? "favorite" : "favorite_border"}}</mat-icon>
             </div>
-            </ng-template>
-        </ng-container>
+          </ng-template>
+      </ng-container>
     
     </owl-carousel-o>
 </div>

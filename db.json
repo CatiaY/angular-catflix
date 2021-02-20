@@ -1,0 +1,149 @@
+{
+  "titulos": [
+    {
+      "titulo": "Grump Torino",
+      "urlCapa": "/assets/img/capa_grump-torino.jpg",
+      "descricao": "Disgruntled Korean War veteran Walt Kowalski sets out to reform his neighbor, Thao Lor, a Hmong teenager who tried to steal Kowalski's prized possession: a 1972 Gran Torino.",
+      "genero": "Filme",
+      "destaque": true,
+      "id": 1
+    },
+    {
+      "titulo": "Pinkylie",
+      "urlCapa": "/assets/img/capa_pinkylie.jpg",
+      "descricao": "Amélie is an innocent and naive girl in Paris with her own sense of justice. She decides to help those around her and, along the way, discovers love.",
+      "genero": "Filme",
+      "destaque": true,
+      "id": 2
+    },
+    {
+      "titulo": "The Lord of The Mice",
+      "urlCapa": "/assets/img/capa_lord-mice.jpg",
+      "descricao": "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
+      "genero": "Filme",
+      "destaque": true,
+      "id": 3
+    },
+    {
+      "titulo": "The Silence of the Cats",
+      "urlCapa": "/assets/img/capa_silence-cats.jpg",
+      "descricao": "A young F.B.I. cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
+      "genero": "Filme",
+      "destaque": null,
+      "id": 4
+    },
+    {
+      "titulo": "The Blair Sphynx Project",
+      "urlCapa": "/assets/img/capa_blair.JPG",
+      "descricao": "Three film students vanish after traveling into a Maryland forest to film a documentary on the local Blair Witch legend, leaving only their footage behind.",
+      "genero": "Filme",
+      "destaque": true,
+      "id": 5
+    },
+    {
+      "titulo": "Taxi Driver",
+      "urlCapa": "/assets/img/capa_taxi-driver.jpg",
+      "descricao": "A mentally unstable veteran works as a nighttime taxi driver in New York City, where the perceived decadence and sleaze fuels his urge for violent action by attempting to liberate a presidential campaign worker and an underage prostitute.",
+      "genero": "Filme",
+      "destaque": true,
+      "id": 6
+    },
+    {
+      "titulo": "Whiskers",
+      "urlCapa": "/assets/img/capa_whiskers.JPG",
+      "descricao": "In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Whiskers.",
+      "genero": "Filme",
+      "destaque": true,
+      "id": 7
+    },
+    {
+      "titulo": "Birdcat of Alcatraz",
+      "urlCapa": "/assets/img/capa_alcatraz.JPG",
+      "descricao": "A surly convicted murderer held in permanent isolation redeems himself when he becomes a renowned bird expert.",
+      "genero": "Filme",
+      "destaque": true,
+      "id": 8
+    },
+    {
+      "titulo": "Dirty Dancing",
+      "urlCapa": "/assets/img/capa_dirty-dancing.jpg",
+      "descricao": "Spending the summer at a Catskills resort with her family, Frances 'Baby' Houseman falls in love with the camp's dance instructor, Johnny Castle.",
+      "genero": "Filme",
+      "destaque": true,
+      "id": 9
+    },
+    {
+      "titulo": "Nip",
+      "urlCapa": "/assets/img/capa_nip.JPG",
+      "descricao": "In the summer of 1989, a group of bullied kids band together to destroy a shape-shifting monster, which disguises itself as a clown and preys on the children of Derry, their small Maine town.",
+      "genero": "Filme",
+      "destaque": true,
+      "id": 10
+    },
+    {
+      "titulo": "The Big Fangs Theory",
+      "urlCapa": "/assets/img/capa_big-fangs-theory.JPG",
+      "descricao": "A woman who moves into an apartment across the hall from two brilliant but socially awkward physicists shows them how little they know about life outside of the laboratory.",
+      "genero": "Série",
+      "destaque": false,
+      "id": 11
+    },
+    {
+      "titulo": "Breaking Cat",
+      "urlCapa": "/assets/img/capa_breaking-cat.JPG",
+      "descricao": "A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.",
+      "genero": "Série",
+      "destaque": false,
+      "id": 12
+    },
+    {
+      "titulo": "House of Cats",
+      "urlCapa": "/assets/img/capa_house-of-cats.JPG",
+      "descricao": "A Congressman works with his equally conniving wife to exact revenge on the people who betrayed him.",
+      "genero": "Série",
+      "destaque": false,
+      "id": 13
+    },
+    {
+      "titulo": "The Clawmaid's Tail",
+      "urlCapa": "/assets/img/capa_clawmaid.JPG",
+      "descricao": "Set in a dystopian future, a woman is forced to live as a concubine under a fundamentalist theocratic dictatorship.",
+      "genero": "Série",
+      "destaque": false,
+      "id": 14
+    },
+    {
+      "titulo": "The Frown",
+      "urlCapa": "/assets/img/capa_frown.JPG",
+      "descricao": "Follows the political rivalries and romance of Queen Elizabeth II's reign and the events that shaped the second half of the twentieth century.",
+      "genero": "Série",
+      "destaque": false,
+      "id": 15
+    },
+    {
+      "titulo": "10 Cloverfield Cats",
+      "urlCapa": "/assets/img/capa_cloverfield.JPG",
+      "descricao": "After getting in a car accident, a woman is held in a shelter by a man who claims that the outside world is affected by a widespread chemical attack.",
+      "genero": "Filme",
+      "destaque": true,
+      "id": 16
+    },
+    {
+      "titulo": "Meows",
+      "urlCapa": "/assets/img/capa_meows.JPG",
+      "descricao": "Forensic anthropologist Dr. Temperance 'Bones' Brennan and cocky F.B.I. Special Agent Seeley Booth build a team to investigate murders. Quite often, there isn't more to examine than rotten flesh or mere bones.",
+      "genero": "Série",
+      "destaque": false,
+      "id": 18,
+      "favorito": true
+    },
+    {
+      "titulo": "Testando",
+      "urlCapa": null,
+      "descricao": null,
+      "genero": "Filme",
+      "destaque": false,
+      "id": 19
+    }
+  ]
+}

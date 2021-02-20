@@ -2,9 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
 
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { MaterialModule } from './shared/material/material/material.module';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,10 +14,8 @@ import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.co
 import { TopoComponent } from './topo/topo.component';
 import { CadastrarMidiaComponent } from './cadastrar-midia/cadastrar-midia.component';
 import { ListarMidiaComponent } from './listar-midia/listar-midia.component';
-import { InputTextComponent } from './shared/components/input-text/input-text.component';
-import { InputTextareaComponent } from './shared/components/input-textarea/input-textarea.component';
-import { InputSelectComponent } from './shared/components/input-select/input-select.component';
-import { HttpClientModule } from '@angular/common/http';
+import { AlertaComponent } from './shared/components/alerta/alerta.component';
+import { CamposModule } from './shared/components/campos.module';
 
 @NgModule({
   declarations: [
@@ -23,20 +23,20 @@ import { HttpClientModule } from '@angular/common/http';
     PaginaPrincipalComponent,
     TopoComponent,    
     CadastrarMidiaComponent, 
-    ListarMidiaComponent, 
-    InputTextComponent, 
-    InputTextareaComponent, 
-    InputSelectComponent
+    ListarMidiaComponent,     
+    AlertaComponent    
   ],
   imports: [
     BrowserModule,    
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
-    CarouselModule,
-    MaterialModule,
+    BrowserAnimationsModule,    
     AppRoutingModule,
-    HttpClientModule 
+    HttpClientModule,
+    CarouselModule,
+    MaterialModule,    
+    InfiniteScrollModule,
+    CamposModule
   ],
   providers: [],
   bootstrap: [AppComponent]

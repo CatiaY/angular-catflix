@@ -1,12 +1,17 @@
+h3 {
+    line-height: 100%;
+}
+
 .container-main {
     background-color: black;    
 }
 
-.filme-principal {
-    background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)100%); 
-    background-size: cover;
+.filme-principal { 
+    background-size: 85vw;
+    background-repeat: no-repeat;
+    background-position: right center;
     height: 60vh;
-    padding: 15px;
+    padding: 15px;    
     margin-bottom: 10px;
     
     display: flex;
@@ -15,7 +20,7 @@
     align-items: flex-start;
 
     font-size: 16px;
-    color: white;
+    color: white;  
 }
 
 .filme-principal .container {
@@ -39,13 +44,13 @@
 }
 
 .slide {
-    cursor: pointer;
+    cursor: pointer;      
 }
 
-.box-filme {
-    height: 100%;
-    width: 100%;
-    display: block;
+.box-filme {    
+    object-fit: fill;    
+    display: block;   
+    height: 300px; 
 }
 
 .img-favorito {

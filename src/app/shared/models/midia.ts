@@ -1,9 +1,8 @@
 export interface Midia {
-    id?: number;
+    id: number;
     titulo: string;
-    urlCapa: string;    
-    urlDestaque: string;    
-    descricao: string;    
+    urlCapa?: string;        
+    descricao?: string;    
     genero: string;
     favorito: boolean;
     destaque: boolean;
