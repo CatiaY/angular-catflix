@@ -63,3 +63,10 @@ body {
 .margin-bottom-20 {
     margin-bottom: 20px;
 }
+
+.sem-registro {
+    margin-top: 50px;
+    color: white;
+    font-size: large;
+    text-align: center;
+}

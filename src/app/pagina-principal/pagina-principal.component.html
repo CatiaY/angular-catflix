@@ -1,4 +1,4 @@
-<main class="container-main" *ngIf="tituloDestaque">
+<main class="container-main" *ngIf="(tituloDestaque && titulos.length); else semRegistro">
     <div class="filme-principal" [style.background-image]="obterImagem()">
         <div class="container">
             <h3 class="titulo">{{ tituloDestaque.titulo | uppercase }}</h3>
@@ -20,6 +20,10 @@
         </div>            
     </div>
 </main>
+
+<ng-template #semRegistro>
+  <h1 class="sem-registro full-width">Nenhum registro encontrado =(</h1>
+</ng-template>
 
 <div class="carrosel-filmes" *ngIf="titulos">
     <owl-carousel-o [options]="ownOptions">        

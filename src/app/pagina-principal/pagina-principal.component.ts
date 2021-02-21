@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { OWLOPTIONS } from 'src/app/core/owl-carousel-config';
 import { MidiaService } from '../core/midia.service';
@@ -20,12 +21,23 @@ export class PaginaPrincipalComponent implements OnInit {
 
   configParams: ConfigParams = {
     pagina: 0,
-    qtdElementosPorPagina: 10
+    qtdElementosPorPagina: 10,
+    campo: { tipo: 'destaque', valor: true }
   }
   
-  constructor( private midiaService: MidiaService ) { }
+  constructor( private activatedRoute: ActivatedRoute, private midiaService: MidiaService ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
+    this.activatedRoute
+      .queryParams
+      .subscribe(params => {
+        if(params.hasOwnProperty('filtro') && params.hasOwnProperty('valor'))
+        { 
+          this.configParams.campo.tipo = params['filtro'];
+          this.configParams.campo.valor = params['valor'];
+        }
+      });         
+
     this.carregarTitulos();
   }  
   
@@ -35,7 +47,13 @@ export class PaginaPrincipalComponent implements OnInit {
         this.titulos = titulos;
         this.tituloDestaque = this.titulos[0];
       });
-  }  
+  }
+  
+  private resetarConsulta(): void {
+    this.configParams.pagina = 0;
+    this.titulos = [];
+    this.carregarTitulos();
+  }
 
   selecionarDestaque(titulo: Midia): void {
     this.tituloDestaque = titulo;
@@ -49,5 +67,10 @@ export class PaginaPrincipalComponent implements OnInit {
   obterImagem(): string { 
     return `linear-gradient(to right, rgba(0, 0, 0, 1)5%, rgba(0, 0, 0, .5)40%, rgba(0, 0, 0, 0)100%), 
             url(${(this.tituloDestaque.urlCapa)? this.tituloDestaque.urlCapa : this.semFotoDestaque})`;
+  }
+
+  filtrar(filtro: string, valor: any): void {    
+    this.configParams.campo = { tipo: filtro, valor: valor };
+    this.resetarConsulta();
   }
 }

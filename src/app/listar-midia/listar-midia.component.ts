@@ -50,6 +50,12 @@ export class ListarMidiaComponent implements OnInit {
       });
   }
   
+  private resetarConsulta(): void {
+    this.configParams.pagina = 0;
+    this.titulos = [];
+    this.carregarTitulos();
+  }
+  
   onScroll(): void {    
     this.carregarTitulos();
   }
@@ -72,5 +78,10 @@ export class ListarMidiaComponent implements OnInit {
           });        
       }            
     });    
+  }
+
+  filtrar(filtro: string, valor: any): void {    
+    this.configParams.campo = { tipo: filtro, valor: valor };
+    this.resetarConsulta();
   }
 }
